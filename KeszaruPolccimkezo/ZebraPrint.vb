@@ -1,7 +1,5 @@
 ﻿Imports System.IO
-Imports System.Drawing.Printing
 Imports System.Runtime.InteropServices
-Imports System.Text
 Imports System.Web
 Public Class ZebraPrint
 
