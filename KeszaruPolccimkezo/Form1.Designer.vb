@@ -120,6 +120,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(717, 138)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.Text = "Készáru raktár polccímkéző    ©2020 Sanatmetal Kft Logisztika"
         Me.TableLayoutPanel1.ResumeLayout(False)
