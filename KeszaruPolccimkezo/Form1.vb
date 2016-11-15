@@ -8,6 +8,10 @@
             ComboBoxPrinter.Items.Add(lsa)
         Next
         ComboBoxPrinter.SelectedIndex = 0
+        ComboBoxTipus.Items.Clear()
+        For Each lsa In labelnames
+            ComboBoxTipus.Items.Add(lsa)
+        Next
         ComboBoxTipus.SelectedIndex = 0
     End Sub
 
