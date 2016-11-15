@@ -26,10 +26,13 @@ Partial Class Form1
         Me.ButtonPrint = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBoxPrinter = New System.Windows.Forms.ComboBox()
-        Me.CheckBoxEgyes = New System.Windows.Forms.CheckBox()
         Me.TextBoxCimke = New System.Windows.Forms.TextBox()
         Me.TextBoxPld = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.CheckBoxEgyes = New System.Windows.Forms.CheckBox()
+        Me.ComboBoxTipus = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -41,9 +44,9 @@ Partial Class Form1
         Me.TableLayoutPanel1.Controls.Add(Me.ButtonPrint, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.ComboBoxPrinter, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.CheckBoxEgyes, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBoxCimke, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBoxPld, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -85,16 +88,6 @@ Partial Class Form1
         Me.ComboBoxPrinter.Size = New System.Drawing.Size(388, 45)
         Me.ComboBoxPrinter.TabIndex = 2
         '
-        'CheckBoxEgyes
-        '
-        Me.CheckBoxEgyes.AutoSize = True
-        Me.CheckBoxEgyes.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBoxEgyes.Name = "CheckBoxEgyes"
-        Me.CheckBoxEgyes.Size = New System.Drawing.Size(136, 17)
-        Me.CheckBoxEgyes.TabIndex = 3
-        Me.CheckBoxEgyes.Text = "Egyes címkenyomtatás"
-        Me.CheckBoxEgyes.UseVisualStyleBackColor = True
-        '
         'TextBoxCimke
         '
         Me.TextBoxCimke.Dock = System.Windows.Forms.DockStyle.Fill
@@ -114,6 +107,40 @@ Partial Class Form1
         Me.TextBoxPld.TabIndex = 5
         Me.TextBoxPld.Text = "2"
         '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 1
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.CheckBoxEgyes, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.ComboBoxTipus, 0, 1)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(162, 63)
+        Me.TableLayoutPanel2.TabIndex = 6
+        '
+        'CheckBoxEgyes
+        '
+        Me.CheckBoxEgyes.AutoSize = True
+        Me.CheckBoxEgyes.Location = New System.Drawing.Point(3, 3)
+        Me.CheckBoxEgyes.Name = "CheckBoxEgyes"
+        Me.CheckBoxEgyes.Size = New System.Drawing.Size(136, 17)
+        Me.CheckBoxEgyes.TabIndex = 4
+        Me.CheckBoxEgyes.Text = "Egyes címkenyomtatás"
+        Me.CheckBoxEgyes.UseVisualStyleBackColor = True
+        '
+        'ComboBoxTipus
+        '
+        Me.ComboBoxTipus.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBoxTipus.FormattingEnabled = True
+        Me.ComboBoxTipus.Items.AddRange(New Object() {"Steril polc", "Kisdoboz"})
+        Me.ComboBoxTipus.Location = New System.Drawing.Point(3, 34)
+        Me.ComboBoxTipus.Name = "ComboBoxTipus"
+        Me.ComboBoxTipus.Size = New System.Drawing.Size(156, 21)
+        Me.ComboBoxTipus.TabIndex = 5
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -126,6 +153,8 @@ Partial Class Form1
         Me.Text = "Készáru raktár polccímkéző    ©2020 Sanatmetal Kft Logisztika"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -134,7 +163,9 @@ Partial Class Form1
     Friend WithEvents ButtonPrint As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboBoxPrinter As ComboBox
-    Friend WithEvents CheckBoxEgyes As CheckBox
     Friend WithEvents TextBoxCimke As TextBox
     Friend WithEvents TextBoxPld As TextBox
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents CheckBoxEgyes As CheckBox
+    Friend WithEvents ComboBoxTipus As ComboBox
 End Class

@@ -8,6 +8,7 @@
             ComboBoxPrinter.Items.Add(lsa)
         Next
         ComboBoxPrinter.SelectedIndex = 0
+        ComboBoxTipus.SelectedIndex = 0
     End Sub
 
     Private Sub ButtonPrint_Click(sender As Object, e As EventArgs) Handles ButtonPrint.Click
@@ -18,7 +19,15 @@
 
     End Sub
 
-    Private Sub CheckBoxEgyes_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxEgyes.CheckedChanged
+    Private Sub CheckBoxEgyes_CheckedChanged(sender As Object, e As EventArgs)
+        If CheckBoxEgyes.Checked Then
+            TextBoxCimke.Enabled = True
+        Else
+            TextBoxCimke.Enabled = False
+        End If
+    End Sub
+
+    Private Sub CheckBoxEgyes_CheckedChanged_1(sender As Object, e As EventArgs) Handles CheckBoxEgyes.CheckedChanged
         If CheckBoxEgyes.Checked Then
             TextBoxCimke.Enabled = True
         Else

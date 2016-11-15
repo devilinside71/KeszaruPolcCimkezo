@@ -129,8 +129,8 @@ Public Class ZebraPrint
         ' Send the converted ANSI string to the printer.
         bSuccess = SendBytesToPrinter(szPrinterName, pBytes, dwCount)
         Marshal.FreeCoTaskMem(pBytes)
-        Console.WriteLine("Print to " & szPrinterName)
-        Console.WriteLine(szString)
+        'Console.WriteLine("Print to " & szPrinterName)
+        'Console.WriteLine(szString)
         Return bSuccess
     End Function
 

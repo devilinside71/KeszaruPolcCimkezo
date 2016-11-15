@@ -9,13 +9,13 @@
 
         Dim TextLine As String
         If Form1.CheckBoxEgyes.Checked Then
-            s = labelcodes(0)
+            s = labelcodes(Form1.ComboBoxTipus.SelectedIndex)
             s = s.Replace("VONALKOD", Form1.TextBoxCimke.Text)
             s = s.Replace("POLCNEV", Form1.TextBoxCimke.Text)
             s = s.Replace("POLCZPL", ZebraPrint.GetZPLutf8Code(Form1.TextBoxCimke.Text))
             s = s.Replace("LABELQTY", Form1.TextBoxPld.Text)
 
-            Console.WriteLine(s)
+            Debug.Print(s)
 
             ' Open the printer dialog box, and then allow the user to select a printer.
             res = ZebraPrint.SendStringToPrinter(printerwinnames(Form1.ComboBoxPrinter.SelectedIndex), s)

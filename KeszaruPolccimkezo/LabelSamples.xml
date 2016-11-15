@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <labels>
-  <label name="Steril">
+  <label name="SterilPolc">
     <code>
       ^XA
       ^LH10,40
@@ -15,6 +15,25 @@
       ^FX Bold miatt 2 ponttal arrebb ugyanaz
       ^FT22,350^FH^FB700,3,0,C^FDPOLCZPL^FS
       ^FT24,350^FH^FB700,3,0,C^FDPOLCZPL^FS
+      ^PQLABELQTY
+      ^XZ
+    </code>
+  </label>
+  <label name="Készáru kis doboz">
+    <code>
+      ^XA
+      ^LH10,40
+      ^FX Barcode Code128, Code39 is too wide
+      ^FT64,35^BY3^BCN,110,N,N,N^FDVONALKOD^FS
+      ^FX UTF-8 font selection: in printer's E memory
+      ^CWT,E:TT0003M_.FNT
+      ^CFT,90,70
+      ^CI28
+      ^FX POLCNEV
+      ^FT30,320^FH^FB400,3,0,C^FDPOLCZPL^FS
+      ^FX Bold miatt 2 ponttal arrebb ugyanaz
+      ^FT32,320^FH^FB400,3,0,C^FDPOLCZPL^FS
+      ^FT34,320^FH^FB400,3,0,C^FDPOLCZPL^FS
       ^PQLABELQTY
       ^XZ
     </code>
