@@ -4,7 +4,7 @@
         Dim s As String
         Dim pd As New PrintDialog()
         Dim res As Boolean
-        Dim FILE_NAME As String = "Cimkek.txt"
+        Dim FILE_NAME As String = My.Settings.CimkeFile
         Dim dlgRes As DialogResult
 
         Dim TextLine As String
@@ -21,7 +21,7 @@
             res = ZebraPrint.SendStringToPrinter(printerwinnames(Form1.ComboBoxPrinter.SelectedIndex), s)
 
         Else
-            dlgRes = MessageBox.Show("Biztosan nyomtatod a Cimkek.txt tartalmát? Ez többszáz címke is lehet!", "FIGYELEM", MessageBoxButtons.YesNo)
+            dlgRes = MessageBox.Show("Biztosan nyomtatod a " & My.Settings.CimkeFile & " tartalmát? Ez többszáz címke is lehet!", "FIGYELEM", MessageBoxButtons.YesNo)
             If dlgRes = DialogResult.Yes Then
 
                 If System.IO.File.Exists(FILE_NAME) = True Then
@@ -43,7 +43,7 @@
                     Loop
                 Else
 
-                    MessageBox.Show("Cimkek.txt nem található")
+                    MessageBox.Show(My.Settings.CimkeFile & " nem található")
                 End If
 
 
